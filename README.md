@@ -22,7 +22,10 @@ A search-based application for managing personal data.
   - Search functionality to retrieve specific user data.
 - **Logic Used:** Python dictionaries, user-input handling, and data retrieval.
 
----
+### 3. Expense Tracker (Robust Version)
+A financial tool that handles numerical data and currency formatting.
+- **Key Features:** CRUD logic, numerical data processing, and **Error Handling (`try/except`)** to prevent crashes.
+- **Skills:** Type casting, f-string precision, and list manipulation.
 
 ## Skills Demonstrated
 - **Data Management:** Mastering CRUD (Create, Read, Update, Delete) operations.
