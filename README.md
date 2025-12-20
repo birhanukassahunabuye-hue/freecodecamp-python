@@ -26,6 +26,12 @@ A search-based application for managing personal data.
 A financial tool that handles numerical data and currency formatting.
 - **Key Features:** CRUD logic, numerical data processing, and **Error Handling (`try/except`)** to prevent crashes.
 - **Skills:** Type casting, f-string precision, and list manipulation.
+### 4. Caesar Cipher (Security Tool)
+A cryptography tool that encrypts and decrypts messages using a shift-based algorithm.
+- **Key Features:** - Dual mode support (Encode/Decode).
+  - Handles non-alphabetical characters (spaces/symbols).
+  - Uses circular logic with the Modulo operator.
+- **Skills:** Mathematical logic (`% 26`), function parameters, and input sanitization.
 
 ## Skills Demonstrated
 - **Data Management:** Mastering CRUD (Create, Read, Update, Delete) operations.
