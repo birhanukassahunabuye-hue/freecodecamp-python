@@ -52,6 +52,56 @@ A cryptography tool that encrypts and decrypts messages using a shift-based algo
 ---
 
 
+# 🏙️ Addis Ababa Smart City: The Encapsulation Saga
+### *Python Object-Oriented Programming (OOP) Study — Pillar 1*
+
+## 📜 Project Overview
+This project simulates the urban infrastructure of **Addis Ababa** to demonstrate the first pillar of OOP: **Encapsulation**. By building various city modules—from the Power Grid to the City Council—I practiced how to bundle data and methods together while protecting the internal state of objects from unauthorized access or accidental corruption.
+
+
+
+---
+##  ----oop-------
+## Encapsulation Features in Addis Ababa
+
+### 1. Identity & Privacy (`Citizen` Class)
+We protect residents' sensitive data using private attributes (`__id_number`). Access is controlled through a `@property` that masks the ID, showing only the last 4 digits (e.g., `*****6789`).
+
+### 2. The Energy Grid (`PowerPlant` Class)
+The power plant manages its own lifecycle. Using a `@setter` for `fuel_level`, the plant automatically switches between `ONLINE` and `OFFLINE` status based on available resources. This prevents the system from being in an "Active" state with zero fuel.
+
+
+
+### 3. Financial Integrity (`BankAccount` Class)
+A `Citizen` object is passed into the `BankAccount` as an owner. Encapsulation ensures the balance can only be changed via `deposit` or `withdraw` methods, enforcing rules like "Insufficient Funds" checks.
+
+### 4. Smart Living (`SmartHome` Class)
+Located at **Bole Dembel**, the SmartHome demonstrates input validation. The climate control setter strictly blocks any temperature outside the safe range of **18°C - 28°C**, protecting the home's infrastructure.
+
+### 5. Centralized Records (`CityHospital` Class)
+The **Addis Ababa City General Hospital** uses a **Dictionary** to map unique IDs to `Citizen` objects. This allows for fast lookup times, demonstrating efficient data management through encapsulated records.
+
+
+
+### 6. Administrative Governance (`CityCouncil` Class)
+This module introduces **Privileged Access**. The city budget cannot be changed directly; it requires a specific `admin_key` to be passed into the `update_budget` method, simulating real-world security protocols.
+
+---
+
+## Key OOP Concepts Applied
+* **Private Attributes:** Using `__attribute` to prevent direct external modification.
+* **Property Decorators:** Using `@property` and `@setter` to create "Managed Attributes."
+* **Data Validation:** Checking the type and length of data (like IDs or Temperatures) before saving it.
+* **Object Composition:** Passing one object (like `Citizen`) into another (like `Bus` or `BankAccount`).
+
+---
+
+## 🏁 Conclusion
+By the end of this module, the **Addis Ababa** system is fully encapsulated. The city is secure, the data is valid, and the objects handle their own logic internally. 
+
+**Next Step:** Moving to **Pillar 2: Inheritance** to create specialized citizens like Doctors and Police Officers!
+
+
 
 ## Milestone Achievement
 This repository documents my preparation for the **FreeCodeCamp Scientific Computing with Python Certification**, successfully mastering the logic required for the first 70 steps of the curriculum.
