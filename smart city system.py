@@ -19,14 +19,15 @@ class Citizen:
             
             print("Invalid id type or Invalid id length")
             self.__id_number="000000000"
+    def perform_duty(self): #polymorphism
+        print(f"{self.name} is commuting to their general job.")
+    
     def __str__(self):
         return ("---Citizen profile---\n"
                 f"Name: {self.name}\n"
                 f"Age: {self.age}\n"
                 f"Job: {self.job}\n"
-                f"Id: {self.id_number}\n"
-                f"-------------------------------"
-                
+                f"Id: {self.id_number}"
                  )
     
 class BankAccount:
@@ -212,8 +213,39 @@ class CityCouncil:
     
 
 
+class  PoliceOfficer(Citizen):
+    def __init__(self, name, age, job, id_number, badge):
+        super().__init__(name, age, job, id_number)
+        self.__badge_number = badge
+    def __str__(self):
+        return super().__str__() + f'\nBadge Number: {self.__badge_number}' + f"\n-----------------------------------"
+    
+    def patrol(self):
+        print(f"Addis ababa is patroled by pollice officers every day.")
 
+    def perform_duty(self):#polymorphism
+        print(f"Officer {self.name} is patrolling the streets of Addis.")
+class Doctor(Citizen):
+    def __init__(self, name, age, job, id_number, specialty):
+        super().__init__(name, age, job, id_number)
+        self.specialty = specialty
+    
+    def __str__(self):
+        return super().__str__() + f"\nSpecialty: {self.specialty.upper()}" + f"\n-----------------------"
 
+    def prescribe_medicine(self):
+        print(f"{self.name} prescribe  paracetamole for me")
+    def perform_duty(self):#polymorphism 
+        print(f"Dr.{self.name} is treating patients in the {self.specialty} ward.")
+
+class Constructor(Citizen):
+    def __init__(self, name, age, job, id_number, specialty):
+        super().__init__(name, age, job, id_number)
+        self.specialty = specialty
+    def __str__(self):
+        return super().__str__() + f"\nspecialty: {self.specialty}" + f"\n------------------------"
+    def perform_duty(self):
+        print(f"Engineer {self.name} is working on  the corridor development in {self.specialty} ward.")
 # ---------CODE TESTING PORTION-----
 
 
@@ -257,4 +289,16 @@ print("\n---Administration ---")
 council = CityCouncil("ADDIS ABABA CITY", 10000000, "ADMIN_99")
 council.update_budget(12000000, "ADMIN_99")
 print(council)
+#---TEST 7: inheritance---
+officer1= PoliceOfficer('amir', 21, 'police officer','998877', 'AA-101')
+print(officer1)
+doctor1 = Doctor('selam', 35, 'doctor', '112233', 'surgeon')
+print(doctor1)
+constract1 = Constructor('dagmawi', 22, 'constructor', '111222333', 'engineering')
+print(constract1)
+#----TEST 8: polymorphism---
+addis_population = [abel, officer1, doctor1,constract1]
 
+print("\n----Morning in Addis Ababa")
+for person in addis_population:
+    person.perform_duty()
