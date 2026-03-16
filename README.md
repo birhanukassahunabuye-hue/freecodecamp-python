@@ -64,6 +64,12 @@
 
 
 ---
+### 🏛️ Pillar 4: Abstraction (COMPLETED)
+**Goal:** Enforcing a "City Contract" so no incomplete classes can be created.
+
+* **Abstract Base Class (ABC):** The `Citizen` class is now a blueprint only. Python will prevent the creation of a direct `Citizen` object.
+* **The Contract:** By using the `@abstractmethod` decorator, I have forced every specialized role to implement their own `perform_duty` logic.
+* **Result:** Increased code safety and strict architectural rules for the Addis Ababa simulation.
 
 ## 🏆 Milestone Achievement
 This repository documents my successful completion of the **FreeCodeCamp Scientific Computing** logic blocks, mastering the transition into class-based architecture and the first three pillars of OOP.
