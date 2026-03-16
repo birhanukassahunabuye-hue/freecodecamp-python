@@ -1,4 +1,5 @@
-class Citizen:
+from abc import ABC, abstractmethod
+class Citizen(ABC):
     def __init__(self, name , age, job , id_number):
        
         self.name = name 
@@ -19,8 +20,10 @@ class Citizen:
             
             print("Invalid id type or Invalid id length")
             self.__id_number="000000000"
-    def perform_duty(self): #polymorphism
-        print(f"{self.name} is commuting to their general job.")
+
+    @abstractmethod        
+    def perform_duty(self): #polymorphism and abstraction
+        pass
     
     def __str__(self):
         return ("---Citizen profile---\n"
@@ -251,7 +254,7 @@ class Constructor(Citizen):
 
 # --- TEST 1: The Citizen & The Bank ---
 print("\n---Identity & Finance ---")
-abel = Citizen("Abel micheal", 28, "Engineer", "123456789")
+abel = Constructor("Abel micheal", 28, "Engineer", "123456789", "corridor development")
 account = BankAccount(abel)
 account.deposit(1000)
 print(abel)
